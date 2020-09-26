@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+<head>
+    <title>Roulette</title>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+     <link href="https://fonts.googleapis.com/css2?family=Asul&display=swap" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg">
+<section class="profile">
+<div class="container">
+
+
+    <div class="page-header text-center">
+        <h1><span class="fa fa-money"></span> Roulette</h1>
+        <% if (user.local.email) { %>
+                <h3>Welcome back, <span id="userEmail"><%= user.local.email %></span></h3>
+
+              <% } %>
+        <a href="/logout" class="btn btn-Pdefault btn-sm">Logout</a>
+    </div>
+
+    <div class="flex">
+
+
+                <h3>PLAY!</h3>
+                <img src="https://www.randomservices.org/random/games/Roulette.png" alt="">
+
+                <ul class="bets">
+                    <% if (roulette[0]) { %>
+                        <li class="bet">
+                          <span>Wins: <span id="wins" ><%= roulette[0].wins %></span></span>
+                          <span>Losses: <span id="losses" ><%= roulette[0].losses %></span></span>
+                          <span>Total: <span id="total" ><%= roulette[0].total %></span></span>
+                        </li>
+                        <section class="button">
+                        <button type="button" class="btn-bet red" name="red">RED</button>
+                        <button type="button" class="btn-bet black" name="black">BLACK</button>
+                        </section>
+                 <% } else { %>
+                   <li class="bet">
+                          <span>Wins: <span id="wins" >0</span></span>
+                          <span>Losses: <span id="losses" > 0 </span></span>
+                          <span>Total: <span id="total" >0</span></span>
+                      </li>
+                      <section class="button">
+                        <button type="button" class="btn-bet" name="red">RED</button>
+                        <button type="button" class="btn-bet" name="black">BLACK</button>
+                        </section>
+                    <% } %>
+              </ul>
+    </div>
+
+</div>
+</section>
+<script src="main.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+    <title>Roulette</title>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+     <link href="https://fonts.googleapis.com/css2?family=Asul&display=swap" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg">
+<section class="profile">
+    <div class="container">
+
+    <div class="page-header text-center">
+        <% if (user.local.email) { %>
+                <h1>Welcome back, <span id="userEmail"><%= user.local.email %></span></h1>
+              <% } %>
+        <a href="/logout" class="btn btn-Pdefault btn-sm">Logout</a>
+    </div>
+
+
+
+            <div class= "flex text-center">
+              <h3>THIS IS THE ADMIN ACCOUNT</h3>
+              <% let adminLosses = 0,
+                     adminWins   = 0,
+                     adminTotal  = 0; %>
+              <% for(let i=0; i < roulette.length; i++) { %>
+                  <% adminLosses += parseInt(roulette[i].wins); %>
+                  <% adminWins   += parseInt(roulette[i].losses); %>
+                  <% adminTotal  += parseInt(roulette[i].total); %>
+              <% } %>
+              <p>House Total Losses:  <%= adminLosses %></p>
+              <p>House Total Wins:    <%= adminWins %></p>
+              <p>House Account Total: $<%= adminTotal %></p>
+            </div>
+    </div>
+
+</section>
+<script src="main.js"></script>
+
+</body>
+</html>

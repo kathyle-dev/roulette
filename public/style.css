@@ -1,0 +1,102 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+body{
+  padding-top: 20px;
+  word-wrap:break-word;
+  font-family: 'Roboto', sans-serif;
+  /* background-image: url("https://q3p9g6n2.rocketcdn.me/wp-content/ml-loads/2016/01/education-school-apple-learn-ss-1920.jpg"); */
+  background-color: #efefef; /* Used if the image is unavailable */
+  height: 800px; /* You must set a specified height */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+  /* color: white; */
+}
+.border{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color:#efefef;
+  border: 2px solid white;
+  border-radius: 8px;
+  height:68vh;
+}
+.bg{
+    background-image: url("https://images.creativemarket.com/0.1.0/ps/7352291/300/200/m2/fpc/wm0/vvrjoailaz2tdbydginnitmmcxxthlkqnrnpibsv9ydigfbocu4d8y9zcqmwomh8-.jpg?1574531419&s=20866de7f7f00a712b8f78f1c6de6e76");
+    background-position: top; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover;
+}
+.jumbotron{
+  background-color:#efefef;
+  border: 2px solid white;
+}
+
+.profile{
+  display: flex;
+  justify-content: center;
+  border:2px solid white;
+  border-radius: 8px;
+  background-color:#efefef;
+  height: 95vh;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.flex{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  align-items: center;
+  border:2px solid #6f6f6f;
+  border-radius: 8px;
+  height: 50vh;
+}
+.button{
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  margin-top: 10px;
+}
+.button button{
+  border: 2px solid black;
+  border-radius: 8px;
+  padding: 0.35rem;
+  color: #efefef;
+  outline: none;
+}
+.button button:hover{
+  border: 2px solid gold;
+}
+.red{
+  background-color: red;
+}
+.black{
+  background-color: black;
+}
+.flex img{
+  filter: drop-shadow(0 0 0.75rem gold);
+  margin-bottom: 5px;
+}
+.flex p{
+  font-size: 18px;
+}
+.bet{
+  font-size: 18px;
+}
+
+img{
+  height: 200px;
+}
+
+ul{
+  list-style-type: none;
+}
+
+h1, h3{
+  font-family: 'Asul', sans-serif;
+  color: #0f0f0f;
+}
